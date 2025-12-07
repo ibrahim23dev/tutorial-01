@@ -35,10 +35,16 @@ const original = {
         scores: [10, 20, 30],
     },
 };
-original.self = original; // Creating a circular reference
+
+original.self = original;
+
 const cloned = deepClone(original);
+
 console.log(cloned);
+
 console.log(cloned === original);
-console.log(cloned.nested === original.nested); // false
-console.log(cloned.self === cloned); // true
+
+console.log(cloned.nested === original.nested);
+
+console.log(cloned.self === cloned);
 
