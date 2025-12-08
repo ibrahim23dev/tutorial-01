@@ -82,16 +82,94 @@
 // hollowSquare(6);
 
 
-function rightAngledTriangle(n) {
-    for (let i = 1; i <= n; i++) {
+// function rightAngledTriangle(n) {
+//     for (let i = 1; i <= n; i++) {
+//         let str = '';
+//         for (let j = 0; j < i; j++) {
+//             str += '*';
+//         }
+//         console.log(str);
+//     }
+// }
+
+// rightAngledTriangle(6);
+
+
+// function invertedRightAngledTriangle(n) {
+//     for (let i = n; i >= 1; i--) {
+//         let str = '';
+//         for (let j = 0; j < i; j++) {
+//             str += '*';
+//         }
+//         console.log(str);
+//     }
+// }
+
+// invertedRightAngledTriangle(6);
+
+// function hollowRightAngledTriangle(n) {
+//     for (let i = 1; i <= n; i++) {
+//         let str = '';
+//         for (let j = 1; j <= i; j++) {
+//             if (j === 1 || j === i || i === n) {
+//                 str += '*';
+//             } else {
+//                 str += ' ';
+//             }
+//         }
+//         console.log(str);
+//     }
+// }
+
+// hollowRightAngledTriangle(6);
+
+
+// function pyramid(n) {
+//     for (let i = 0; i < n; i++) {
+//         let str = '';
+//         for (let j = 0; j < n - i - 1; j++) {
+//             str += ' ';
+//         }
+//         for (let k = 0; k < 2 * i + 1; k++) {
+//             str += '*';
+//         }
+//         console.log(str);
+//     }
+// }
+
+// pyramid(6);
+
+// function invertedPyramid(n) {
+//     for (let i = 0; i < n; i++) {
+//         let str = '';
+//         for (let j = 0; j < i; j++) {
+//             str += ' ';
+//         }
+//         for (let k = 0; k < 2 * (n - i) - 1; k++) {
+//             str += '*';
+//         }
+//         console.log(str);
+//     }
+// }
+
+// invertedPyramid(6);
+
+
+function hollowPyramid(n) {
+    for (let i = 0; i < n; i++) {
         let str = '';
-        for (let j = 0; j < i; j++) {
-            str += '*';
+        for (let j = 0; j < n - i - 1; j++) {
+            str += ' ';
+        }
+        for (let k = 0; k < 2 * i + 1; k++) {
+            if (k === 0 || k === 2 * i || i === n - 1) {
+                str += '*';
+            } else {
+                str += ' ';
+            }
         }
         console.log(str);
     }
 }
 
-rightAngledTriangle(6);
-
-
+hollowPyramid(6);
