@@ -173,3 +173,4 @@ function hollowPyramid(n) {
 }
 
 hollowPyramid(6);
+
